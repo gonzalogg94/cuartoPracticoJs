@@ -10,33 +10,31 @@ Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y vo
 Rectángulos.
 */
 
-class Usuario{
-    constructor(userName,dinero){
-        this.userName = nombre;
-        this.dinero = saldo;
-        ingresar(deposito){
-            console.log(this);
-            this.saldo += deposito; // c.saldo = deposito + c.saldo;
-            console.log('Se ingreso $'+ deposito);
-        },
-        extraer(retiro){
-            if(this.saldo >= retiro){
-                this.saldo -= retiro;
-                document.write(`<p>Se retiro $${retiro}</p>`);
-            }else{
-                document.write(`<p>Saldo insuficiente</p>`);
-            }
-        },
-        informar(){
-            document.write(`<p>La cuenta de ${this.titular}, posee un saldo de $${this.saldo}</p>`)
-        },
-        
+class Usuario {
+  constructor(titular, saldoInicial) {
+    this.titular = titular;
+    this.saldoInicial = saldoInicial;
+  }
+  ingresar(deposito) {
+    this.saldoInicial += deposito;
+    document.write(`Se ingreso un monto de $${deposito} en la cuenta de ${this.titular}`);
+  }
+  extraer(retiro) {
+    if (this.saldoInicial >= retiro) {
+      this.saldoInicial -= retiro;
+      document.write(`<p>Se retiro $${retiro}</p>`);
+    } else {
+      document.write(`<p>Saldo insuficiente, no puede retirarse de la cuenta los ${retiro} ingresados</p>`);
     }
-    }
-    cuenta.informar(cuenta);
-    console.log(this)
-    let deposito = parseFloat(prompt('Ingrese el monto deseado'));
-cuenta.ingresar(deposito);
-let retiro = parseFloat(prompt('Ingrese el monto a extraer'));
-cuenta.extraer(retiro);
-cuenta.informar();
+  }
+  informar() {
+    document.write(`<p>La cuenta de ${this.titular}, posee un saldo de $${this.saldoInicial}</p>` );
+  }
+}
+
+let Usuario1= new Usuario(prompt("ingrese el nombre del usuario"),Number(prompt("ingrese el monto inicial")));
+let deposito=parseInt(prompt("ingrese un deposito"));
+let retiro=parseInt(prompt("ingrese un retiro de dinero"));
+Usuario1.ingresar(deposito);
+Usuario1.extraer(retiro);
+Usuario1.informar();

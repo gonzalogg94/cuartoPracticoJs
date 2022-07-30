@@ -3,3 +3,25 @@ Escribe una clase Producto para crear objetos. Estos objetos, deben presentar la
 Posteriormente, cree tres instancias de este objeto y guárdalas en un array.
 Por último, utilice el método imprime datos para mostrar por pantalla los valores de los tres objetos instanciados.
 */
+
+class Producto{
+    constructor(codigo,nombre,precio){
+        this.codigo=codigo;
+        this.nombre=nombre;
+        this.precio=precio;
+    }
+    imprimeDatos(){
+        document.write(`<ul>
+        <li>El codigo del producto es: ${this.codigo}</li>
+        <li>El nombre del producto es: ${this.nombre}</li>
+        <li>El precio del producto es: $${this.precio}</li>
+        </ul>`);
+    }
+}
+
+let producto1=new Producto(parseInt(prompt("ingrese el codigo del producto")),(prompt("ingrese el nombre del producto")),parseInt(prompt("ingrese el precio del producto")));
+    producto1.imprimeDatos();
+let producto2=new Producto(parseInt(prompt("ingrese el codigo del producto")),(prompt("ingrese el nombre del producto")),parseInt(prompt("ingrese el precio del producto")));
+    producto2.imprimeDatos();
+let producto3=new Producto(parseInt(prompt("ingrese el codigo del producto")),(prompt("ingrese el nombre del producto")),parseInt(prompt("ingrese el precio del producto")));
+    producto3.imprimeDatos();

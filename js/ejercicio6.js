@@ -22,7 +22,32 @@ class Libro{
         <h3>El libro ingresado tiene los siguientes datos :</h3>
             <p>El libro ${this.titulo} tiene el ISBN ${this.isbn} creado por el autor ${this.autor}tiene la cantidad de ${this.numeroPaginas}</p>`);
     }
+    set modificarIsbn(nuevoIsbn){
+        this.isbn=nuevoIsbn;
+    }
+    set modificarTitulo(nuevoTitulo){
+        this.titulo=nuevoTitulo;
+    }
+    set modificarAutor(nuevoAutor){
+        this.autor=nuevoAutor;
+    }
+    set modificarPaginas(nuevaPagina){
+        this.isbn=nuevaPagina;
+    }
+    get mostrarIsbn(){
+        return this.isbn;
+    }
+    get mostrarTitulo(){
+        return this.titulo;
+    }
+    get mostrarAutor(){
+        return this.autor;
+    }
+    get mostrarPaginas(){
+        return this.numeroPaginas;
+    }
 }
+
 
 let libro1=new Libro(parseInt(prompt("Ingrese el isbn del libro")),prompt("Ingrese el titulo del libro"),prompt("Ingrese el nombre del autor del libro"),parseInt(prompt("Ingrese el numero de paginas del libro")));
 libro1.mostrarLibro();

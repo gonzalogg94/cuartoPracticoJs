@@ -30,6 +30,20 @@ class Usuario {
   informar() {
     document.write(`<p>La cuenta de ${this.titular}, posee un saldo de $${this.saldoInicial}</p>` );
   }
+  
+  set modificarTitular(nuevoTitular){
+    this.titular=nuevoTitular;
+}
+set modificarSaldo(nuevoSaldo){
+  this.saldoInicial=nuevoSaldo;
+}
+get mostrarTitular(){
+  return this.titular;
+}
+get mostrarSaldo(){
+  return this.saldoInicial;
+}
+
 }
 
 let Usuario1= new Usuario(prompt("ingrese el nombre del usuario"),Number(prompt("ingrese el monto inicial")));

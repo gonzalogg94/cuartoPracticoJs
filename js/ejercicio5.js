@@ -63,6 +63,48 @@ class Persona{
         }
 
     }
+    set modificarNombre(nuevoNombre){
+        this.nombre=nuevoNombre;
+}
+    set modificarEdad(nuevoEdad){
+        this.edad=nuevoEdad;
+}
+    set modificarDni(nuevoDni){
+        this.dni=nuevoDni;
+}
+    set modificarSexo(nuevoSexo){
+        this.sexo=nuevoSexo;
+}
+    set modificarPeso(nuevoPeso){
+        this.peso=nuevoPeso;
+}
+    set modificarAltura(nuevoAltura){
+        this.altura=nuevoAltura;
+}
+    set modificarAñoNacimiento(nuevoAñoNacimiento){
+        this.añoNacimiento=nuevoAñoNacimiento;
+}
+get mostrarNombre(){
+    return this.nombre;
+  }
+get mostrarEdad(){
+    return this.edad;
+  }
+get mostrarDni(){
+    return this.dni;
+  }
+get mostrarSexo(){
+    return this.sexo;
+  }
+get mostrarPeso(){
+    return this.peso;
+  }
+get mostrarAltura(){
+    return this.altura;
+  }
+get mostrarAñoNacimiento(){
+    return this.añoNacimiento;
+  }
 }
 
 let nombre= prompt("Ingrese el nombre de la persona");

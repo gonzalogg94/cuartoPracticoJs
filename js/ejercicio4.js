@@ -17,6 +17,25 @@ class Producto{
         <li>El precio del producto es: $${this.precio}</li>
         </ul>`);
     }
+    set modificarCodigo(nuevoCodigo){
+        this.codigo=nuevoCodigo;
+}
+    set modificarNombre(nuevoNombre){
+        this.nombre=nuevoNombre;
+}
+    set modificarPrecio(nuevoPrecio){
+        this.precio=nuevoPrecio;
+}
+
+get mostrarCodigo(){
+    return this.codigo;
+  }
+  get mostrarNombre(){
+    return this.nombre;
+  }
+  get mostrarPrecio(){
+    return this.precio;
+  }
 }
 
 let producto1=new Producto(parseInt(prompt("ingrese el codigo del producto")),(prompt("ingrese el nombre del producto")),parseInt(prompt("ingrese el precio del producto")));

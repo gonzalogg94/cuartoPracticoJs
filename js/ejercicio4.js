@@ -21,10 +21,6 @@ class Producto{
     guardarProducto(producto){
     this.productos.push(producto);
     }
-    mostrarLista(){
-        for(let i=0; i < this.productos.length; i++){
-            document.write(this.productos[i])
-    }
     set modificarCodigo(nuevoCodigo){
         this.codigo=nuevoCodigo;
 }
@@ -52,7 +48,6 @@ let producto2=new Producto(parseInt(prompt("ingrese el codigo del producto")),(p
     producto2.imprimeDatos();
 let producto3=new Producto(parseInt(prompt("ingrese el codigo del producto")),(prompt("ingrese el nombre del producto")),parseInt(prompt("ingrese el precio del producto")));
     producto3.imprimeDatos();
- producto1.guardarProducto(producto1)
- producto1.guardarProducto(producto1)
- producto1.guardarProducto(producto1)
+    document.write(this.productos)
+
 
